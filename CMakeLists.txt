@@ -3,5 +3,5 @@ project(Structures)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES Trees/MergeBST.cpp)
+set(SOURCE_FILES Trees/BST.cpp)
 add_executable(Structures ${SOURCE_FILES})

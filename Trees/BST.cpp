@@ -171,7 +171,17 @@ BSTnode* deleteBSTnode(BSTnode* root, int value){
     }
     return root;
 }
-
+int howhigh(BSTnode* root, int val){
+    BSTnode *tmp=findBSTnode(root,val);
+    if(tmp==NULL) return 0;
+    int count =0;
+    while(tmp!=NULL && tmp->value<=val){
+        count++;
+        count+=nodesAmount(tmp->left);
+        tmp=tmp->parent;
+    }
+    return count;
+}
 
 int main(){
     BSTnode * tree = NULL;
@@ -183,13 +193,21 @@ int main(){
     addBSTnode(tree,19);
     addBSTnode(tree,30);
     addBSTnode(tree,8);
-    BSTnode * finded = findBSTnode(tree,20);
-    BSTnode * removed = getBSTnode(tree,finded);
+ //   BSTnode * finded = findBSTnode(tree,20);
+   // BSTnode * removed = getBSTnode(tree,finded);
     double c = 0, s = 0;
     cout << "ilosc z przedzialu [a,b] to " << countInterval(tree,5,12) << endl;
     cout << "suma wartosci wezlow w drzewie to " << sumBST(tree) << endl;
     cout << "ilosc wezlow w drzewie to " << nodesAmount(tree) << endl;
     cout << "srednia wartosc wezla to " << avarge2(tree,c,s) << endl;
+    cout << "który z kolei w drzewie " << howhigh(tree,20) << endl;
+    cout << "który z kolei w drzewie " << howhigh(tree,30) << endl;
+    cout << "który z kolei w drzewie " << howhigh(tree,15) << endl;
+    cout << "który z kolei w drzewie " << howhigh(tree,7) << endl;
+    cout << "który z kolei w drzewie " << howhigh(tree,8) << endl;
+
+
+
     cout<< "succ "<<prev(findBSTnode(tree,7))->value<<endl;
     printBST(tree);
 }

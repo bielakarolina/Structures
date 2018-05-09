@@ -93,6 +93,7 @@ Set createSet(string A[], int n){
     Set * HT = new Set;
     HT->size = n;
     HT->data = new int [HT->size];
+    HT->status=new Status [HT->size];
 
     //ustawianie wszystkich pól na NULL
     for (int i = 0; i < HT->size; i++) {
@@ -107,7 +108,8 @@ Set createSet(string A[], int n){
 }
 
 
-//szukanie adresowanie otwarte
+//szukanie adresowanie otwarte//zle, przecież tu trzeba pętle jebnąć
+//gupia jestem
 bool contains( Set *a, string s )  // w temacie zadania jest bez
 {
     int data=frombinaryto10(stoi(s));
