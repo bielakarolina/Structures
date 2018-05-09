@@ -364,10 +364,10 @@ int main() {
     d[2].n_id=538;
     d[3].n_id=-1;
 
-    cout << smallest_group(c,CYCLIST_COUNT)<<endl;
+    //cout << smallest_group(c,CYCLIST_COUNT)<<endl;
     cout << smallestGroup(c,CYCLIST_COUNT)<<endl;
 
-    cout << smallest_group(d,4)<<endl;
+  //  cout << smallest_group(d,4)<<endl;
     cout << smallestGroup(d,4)<<endl;
 }
 

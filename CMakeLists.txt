@@ -3,5 +3,5 @@ project(Structures)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES HashTable/DeleteKeep_looking.cpp)
+set(SOURCE_FILES Trees/MergeBST.cpp)
 add_executable(Structures ${SOURCE_FILES})
